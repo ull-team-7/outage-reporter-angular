@@ -1,0 +1,15 @@
+<div style="padding: 13px;">
+    <mat-card *ngFor="let outage of outages" style="margin-top: 11px;">
+        <mat-card-content>
+            <p>
+                <b>Name:</b> {{ outage.firstName + " " + outage.lastName }}<br>
+                <b>Address:</b> {{ outage.streetAddress + ", " + outage.zipCode }}<br>
+                <b>Email:</b> {{ outage.email }}<br>
+                <b>Comment:</b> {{ outage.comment }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+    <div style="padding: 10px;">
+        <button>Report Outage</button>
+    </div>
+</div>
