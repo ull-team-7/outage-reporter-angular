@@ -1,4 +1,5 @@
 <div style="padding: 13px;">
+    <h1>Outages</h1>
     <mat-card *ngFor="let outage of outages" style="margin-top: 11px;">
         <mat-card-content>
             <p>
@@ -10,6 +11,6 @@
         </mat-card-content>
     </mat-card>
     <div style="padding: 10px;">
-        <button>Report Outage</button>
+        <button class="btn btn-success" (click)="createOutage()">Report Outage</button>
     </div>
 </div>

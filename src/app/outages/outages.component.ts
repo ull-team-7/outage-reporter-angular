@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Outage } from '../outage';
 import { OutageService } from '../outage.service';
 
@@ -11,7 +12,7 @@ export class OutagesComponent implements OnInit {
 
   outages!: Outage[];
 
-  constructor(private outageService: OutageService) { }
+  constructor(private outageService: OutageService, private router: Router) { }
 
   ngOnInit(): void {
     this.outageService.getOutages().subscribe((data) => {
@@ -19,4 +20,7 @@ export class OutagesComponent implements OnInit {
     });
   }
 
+  createOutage() {
+    this.router.navigate(["report-outage"]);
+  }
 }

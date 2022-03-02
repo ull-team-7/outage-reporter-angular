@@ -1,0 +1,50 @@
+<div class="report-outage">
+    <h1>Report Outage</h1>
+    <form (ngSubmit)="onSubmit()" #outageForm="ngForm" >
+        <div class="forum-group">
+            <label for="firstName">First Name: </label>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="outage.firstName"
+                name="firstName" #firstName="ngModel">
+            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                First Name is required
+            </div>
+        </div>
+        <div class="forum-group">
+            <label for="lastName">Last Name: </label>
+            <input type="text" class="form-control" id="lastName" required [(ngModel)]="outage.lastName" name="lastName"
+                #lastName="ngModel">
+            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                Last Name is required
+            </div>
+        </div>
+        <div class="forum-group">
+            <label for="streetAddress">Street Address: </label>
+            <input type="text" class="form-control" id="streetAddress" required [(ngModel)]="outage.streetAddress"
+                name="streetAddress" #streetAddress="ngModel">
+            <div [hidden]="streetAddress.valid || streetAddress.pristine" class="alert alert-danger">
+                Street Address is required
+            </div>
+        </div>
+        <div class="forum-group">
+            <label for="zipCode">Zip Code: </label>
+            <input type="text" length="5" pattern="[0-9]{5}" class="form-control" id="zipCode" required
+                [(ngModel)]="outage.zipCode" name="zipCode" #zipCode="ngModel">
+            <div [hidden]="zipCode.valid || zipCode.pristine" class="alert alert-danger">
+                Zip Code is required
+            </div>
+        </div>
+        <div class="forum-group">
+            <label for="firstName">Email: </label>
+            <input type="email" class="form-control" id="email" required [(ngModel)]="outage.email" name="email"
+                #email="ngModel">
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                Email is required
+            </div>
+        </div>
+        <div class="forum-group">
+            <label for="comment">Comment: </label>
+            <input type="text" class="form-control" id="comment" [(ngModel)]="outage.comment" name="comment">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!outageForm.form.valid">Submit</button>
+    </form>
+</div>

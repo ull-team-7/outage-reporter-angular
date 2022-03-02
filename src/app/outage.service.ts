@@ -15,11 +15,17 @@ export class OutageService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'applications/json',
+      'Content-Type': 'application/json',
     }),
   };
 
   public getOutages(): Observable<Outage[]> {
     return this.httpClient.get<Outage[]>(this.restServerURL + "/outages");
   }
+
+   public addOutage(outage: any): Observable<Outage> {
+     return this.httpClient.post<Outage>(
+       this.restServerURL + "/outages", JSON.stringify(outage), this.httpOptions
+     );
+   }
 }
