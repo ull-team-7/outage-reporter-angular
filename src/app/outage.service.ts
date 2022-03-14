@@ -20,12 +20,12 @@ export class OutageService {
   };
 
   public getOutages(): Observable<Outage[]> {
-    return this.httpClient.get<Outage[]>(this.restServerURL + "/outages");
+    return this.httpClient.get<Outage[]>(this.restServerURL + "/outages/all");
   }
 
    public addOutage(outage: any): Observable<Outage> {
      return this.httpClient.post<Outage>(
-       this.restServerURL + "/outages", JSON.stringify(outage), this.httpOptions
+       this.restServerURL + "/outages/add", JSON.stringify(outage), this.httpOptions
      );
    }
 }
