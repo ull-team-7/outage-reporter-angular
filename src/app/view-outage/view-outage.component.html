@@ -1,6 +1,6 @@
 <div style="padding: 13px;">
     <h1>Outages</h1>
-    <mat-card *ngFor="let outage of outages" (click)="navigate(outage.id)" style="margin-top: 11px;">
+    <mat-card style="margin-top: 11px;">
         <mat-card-content>
             <p>
                 <b>Name:</b> {{ outage.firstName + " " + outage.lastName }}<br>
@@ -11,6 +11,6 @@
         </mat-card-content>
     </mat-card>
     <div style="padding: 10px;">
-        <button class="btn btn-success" (click)="createOutage()">Report Outage</button>
+        <button class="btn btn-success" (click)="delete()">Delete Outage</button>
     </div>
 </div>
