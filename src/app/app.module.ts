@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { OutagesComponent } from './outages/outages.component';
 import { ReportOutageComponent } from './report-outage/report-outage.component';
 import { UtilityComponent } from './utility/utility.component';
+import { CreateUtilityComponent } from './create-utility/create-utility.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { UtilityComponent } from './utility/utility.component';
     HomeComponent,
     OutagesComponent,
     ReportOutageComponent,
-    UtilityComponent
+    UtilityComponent,
+    CreateUtilityComponent
   ],
   imports: [
     AppRoutingModule,
