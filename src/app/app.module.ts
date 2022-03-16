@@ -21,6 +21,7 @@ import { OutagesComponent } from './outages/outages.component';
 import { ReportOutageComponent } from './report-outage/report-outage.component';
 import { UtilityComponent } from './utility/utility.component';
 import { CreateUtilityComponent } from './create-utility/create-utility.component';
+import { ViewOutageComponent } from './view-outage/view-outage.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CreateUtilityComponent } from './create-utility/create-utility.componen
     OutagesComponent,
     ReportOutageComponent,
     UtilityComponent,
-    CreateUtilityComponent
+    CreateUtilityComponent,
+    ViewOutageComponent,
   ],
   imports: [
     AppRoutingModule,
