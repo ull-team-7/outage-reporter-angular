@@ -1,0 +1,15 @@
+<div style="padding: 13px;">
+    <h1>Utility Companies</h1>
+    <mat-card *ngFor="let u of utilities" style="margin-top: 11px;">
+        <mat-card-content>
+            <p>
+                <b>Name:</b> {{ u.name }}<br>
+                <b>Email:</b> {{ u.email }}<br>
+                <b>Website:</b> {{ u.website }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+    <div style="padding: 10px;">
+        <button class="btn btn-success" (click)="createUtilities()">Add Utility</button>
+    </div>
+</div>

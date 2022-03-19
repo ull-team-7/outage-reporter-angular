@@ -30,7 +30,7 @@
             <input type="text" length="5" pattern="[0-9]{5}" class="form-control" id="zipCode" required
                 [(ngModel)]="outage.zipCode" name="zipCode" #zipCode="ngModel">
             <div [hidden]="zipCode.valid || zipCode.pristine" class="alert alert-danger">
-                Zip Code is required
+                Please enter a valid Zip Code
             </div>
         </div>
         <div class="forum-group">
