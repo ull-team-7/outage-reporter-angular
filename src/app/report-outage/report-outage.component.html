@@ -1,6 +1,6 @@
 <div class="report-outage">
     <h1>Report Outage</h1>
-    <form (ngSubmit)="onSubmit()" #outageForm="ngForm" >
+    <form (ngSubmit)="onSubmit()" #outageForm="ngForm">
         <div class="forum-group">
             <label for="firstName">First Name: </label>
             <input type="text" class="form-control" id="firstName" required [(ngModel)]="outage.firstName"
@@ -44,6 +44,15 @@
         <div class="forum-group">
             <label for="comment">Comment: </label>
             <input type="text" class="form-control" id="comment" [(ngModel)]="outage.comment" name="comment">
+        </div>
+        <div class="forum-group">
+            <mat-form-field>
+                <mat-select>
+                    <mat-option *ngFor="let utility of utilities">
+                        {{utility.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
         <button type="submit" class="btn btn-success" [disabled]="!outageForm.form.valid">Submit</button>
     </form>
