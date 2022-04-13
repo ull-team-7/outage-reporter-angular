@@ -1,5 +1,5 @@
 export class Outage {
-
+    id!: number;
     firstName!: string;
     lastName!: string;
     streetAddress!: string;

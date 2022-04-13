@@ -23,9 +23,17 @@ export class OutageService {
     return this.httpClient.get<Outage[]>(this.restServerURL + "/outages");
   }
 
+  public getOutage(id: number) {
+    return this.httpClient.get<Outage> (this.restServerURL + "/outages/" + id);
+  }
+
    public addOutage(outage: any): Observable<Outage> {
      return this.httpClient.post<Outage>(
        this.restServerURL + "/outages", JSON.stringify(outage), this.httpOptions
      );
+   }
+
+   public deleteOutage(id: number) {
+     return this.httpClient.delete<Outage>(this.restServerURL + "/outages/" + id);
    }
 }
