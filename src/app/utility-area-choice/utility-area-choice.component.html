@@ -1,0 +1,15 @@
+<div class="utility-area-choice">
+    <h1>Choose Utility Company to View Areas</h1>
+    <form (ngSubmit)="onSubmit()" #utilityAreaForm="ngForm">
+        <div class="forum-group">
+            <mat-form-field>
+                <mat-select placeholder="Utility Company" required [(ngModel)]="selectedOption" name="first">
+                    <mat-option *ngFor="let utility of utilities" value="{{ utility.utilityId }}">
+                        {{ utility.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!utilityAreaForm.form.valid">Submit</button>
+    </form>
+</div>

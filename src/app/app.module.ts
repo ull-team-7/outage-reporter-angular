@@ -23,6 +23,7 @@ import { UtilityComponent } from './utility/utility.component';
 import { CreateUtilityComponent } from './create-utility/create-utility.component';
 import { UtilityAreaComponent } from './utility-area/utility-area.component';
 import { CreateUtilityAreaComponent } from './create-utility-area/create-utility-area.component';
+import { UtilityAreaChoiceComponent } from './utility-area-choice/utility-area-choice.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CreateUtilityAreaComponent } from './create-utility-area/create-utility
     UtilityComponent,
     CreateUtilityComponent,
     UtilityAreaComponent,
-    CreateUtilityAreaComponent
+    CreateUtilityAreaComponent,
+    UtilityAreaChoiceComponent
   ],
   imports: [
     AppRoutingModule,

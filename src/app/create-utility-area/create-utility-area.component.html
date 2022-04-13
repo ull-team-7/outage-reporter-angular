@@ -1,1 +1,35 @@
-<p>create-utility-area works!</p>
+<div class="create-utility-area">
+    <h1>Create Utility Area</h1>
+    <form (ngSubmit)="onSubmit()" #utilityAreaForm="ngForm">
+        <div class="forum-group">
+            <mat-form-field>
+                <mat-select placeholder="Utility Company" required [(ngModel)]="utilityId" name="first">
+                    <mat-option *ngFor="let utility of utilities" value="{{ utility.utilityId }}">
+                        {{ utility.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="forum-group">
+            <label for="zipCode">Zip Code: </label>
+            <input type="text" length="5" pattern="[0-9]{5}" class="form-control" id="zipCode" required
+                [(ngModel)]="utilityArea.zipCode" name="zipCode" #zipCode="ngModel">
+            <div [hidden]="zipCode.valid || zipCode.pristine" class="alert alert-danger">
+                Please enter a valid Zip Code
+            </div>
+        </div>
+        <div class="forum-group">
+            <label for="outageStatus">Current Outage: </label>
+            <input type="checkbox" class="form-control" id="outageStatus" [(ngModel)]="utilityArea.outageStatus" name="outageStatus">
+        </div>
+        <div class="forum-group">
+            <label for="fixTime">Time Until Fix: </label>
+            <input type="text" class="form-control" id="fixTime" [(ngModel)]="utilityArea.fixTime" name="fixTime">
+        </div>
+        <div class="forum-group">
+            <label for="comment">Comment: </label>
+            <input type="text" class="form-control" id="comment" [(ngModel)]="utilityArea.comment" name="comment">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!utilityAreaForm.form.valid">Submit</button>
+    </form>
+</div>

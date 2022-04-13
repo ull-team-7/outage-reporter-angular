@@ -24,10 +24,7 @@ export class UtilityService {
   }
 
   public getUtility(utilityId: number): Observable<Utility> {
-    let x = this.httpClient.get<Utility>(this.restServerURL + "/utility/" + utilityId);
-    console.log(this.restServerURL + "/utility/" + utilityId);
-    console.log(x);
-    return x;
+    return this.httpClient.get<Utility>(this.restServerURL + "/utility/" + utilityId);
   }
 
    public addUtility(utility: any): Observable<Utility> {
