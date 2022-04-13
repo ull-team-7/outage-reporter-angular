@@ -4,23 +4,24 @@ import { Utility } from '../utility';
 import { UtilityService } from '../utility.service';
 
 @Component({
-  selector: 'app-utility',
-  templateUrl: './utility.component.html',
-  styleUrls: ['./utility.component.css']
+  selector: 'app-utility-area-choice',
+  templateUrl: './utility-area-choice.component.html',
+  styleUrls: ['./utility-area-choice.component.css']
 })
-export class UtilityComponent implements OnInit {
+export class UtilityAreaChoiceComponent implements OnInit {
 
   utilities!: Utility[];
+  selectedOption!: number;
 
   constructor(private utilityService: UtilityService, private router: Router) {}
 
   ngOnInit(): void {
     this.utilityService.getUtilities().subscribe((data) => {
-      this.utilities = data;
-    });
+    this.utilities = data});
   }
 
-  createUtilities() {
-    this.router.navigate(["create-utility"]);
+  onSubmit() {
+    this.router.navigate(['/utility-area/' + this.selectedOption]);
   }
+
 }

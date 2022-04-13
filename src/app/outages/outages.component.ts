@@ -21,6 +21,10 @@ export class OutagesComponent implements OnInit {
   }
 
   createOutage() {
-    this.router.navigate(["report-outage"]);
+    this.router.navigate(["/report-outage"]);
+  }
+
+  navigate(id: number) {
+    this.router.navigate(["/outages/" + id]);
   }
 }

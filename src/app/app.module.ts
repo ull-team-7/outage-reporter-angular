@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 
 // Outage Reporter Components
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,10 @@ import { OutagesComponent } from './outages/outages.component';
 import { ReportOutageComponent } from './report-outage/report-outage.component';
 import { UtilityComponent } from './utility/utility.component';
 import { CreateUtilityComponent } from './create-utility/create-utility.component';
+import { ViewOutageComponent } from './view-outage/view-outage.component';
+import { UtilityAreaComponent } from './utility-area/utility-area.component';
+import { CreateUtilityAreaComponent } from './create-utility-area/create-utility-area.component';
+import { UtilityAreaChoiceComponent } from './utility-area-choice/utility-area-choice.component';
 
 
 @NgModule({
@@ -29,7 +34,12 @@ import { CreateUtilityComponent } from './create-utility/create-utility.componen
     OutagesComponent,
     ReportOutageComponent,
     UtilityComponent,
-    CreateUtilityComponent
+    CreateUtilityComponent,
+    ViewOutageComponent,
+    ViewOutageComponent,
+    UtilityAreaComponent,
+    CreateUtilityAreaComponent,
+    UtilityAreaChoiceComponent
   ],
   imports: [
     AppRoutingModule,
@@ -41,7 +51,8 @@ import { CreateUtilityComponent } from './create-utility/create-utility.componen
     MatCardModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
