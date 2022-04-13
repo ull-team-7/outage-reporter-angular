@@ -15,7 +15,7 @@ export class UtilityComponent implements OnInit {
   constructor(private utilityService: UtilityService, private router: Router) {}
 
   ngOnInit(): void {
-    this.utilityService.getUtility().subscribe((data) => {
+    this.utilityService.getUtilities().subscribe((data) => {
       this.utilities = data;
     });
   }
