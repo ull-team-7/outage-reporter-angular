@@ -33,6 +33,7 @@ import { ViewOutageComponent } from './view-outage/view-outage.component';
     UtilityComponent,
     CreateUtilityComponent,
     ViewOutageComponent,
+    ViewOutageComponent
   ],
   imports: [
     AppRoutingModule,
