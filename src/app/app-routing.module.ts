@@ -6,6 +6,7 @@ import { ReportOutageComponent } from './report-outage/report-outage.component';
 import { ViewOutageComponent } from './view-outage/view-outage.component';
 import { UtilityComponent } from './utility/utility.component';
 import { UtilityAreaComponent } from './utility-area/utility-area.component';
+import { CreateUtilityComponent } from './create-utility/create-utility.component';
 import { CreateUtilityAreaComponent } from './create-utility-area/create-utility-area.component';
 import { UtilityAreaChoiceComponent } from './utility-area-choice/utility-area-choice.component';
 
