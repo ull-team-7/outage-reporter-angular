@@ -18,9 +18,8 @@ export class ReportOutageComponent implements OnInit {
   constructor(private outageService: OutageService, private router: Router, private utilityService: UtilityService) { }
 
   ngOnInit(): void {
-    this.utilityService.getUtility().subscribe((data) => {
+    this.utilityService.getUtilities().subscribe((data) => {
     this.utilities = data});
-    console.log(this.utilities);
   }
 
   onSubmit() {

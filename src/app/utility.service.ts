@@ -19,8 +19,12 @@ export class UtilityService {
     }),
   };
 
-  public getUtility(): Observable<Utility[]> {
+  public getUtilities(): Observable<Utility[]> {
     return this.httpClient.get<Utility[]>(this.restServerURL + "/utility");
+  }
+
+  public getUtility(utilityId: number): Observable<Utility> {
+    return this.httpClient.get<Utility>(this.restServerURL + "/utility/" + utilityId);
   }
 
    public addUtility(utility: any): Observable<Utility> {

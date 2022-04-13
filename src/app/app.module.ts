@@ -22,6 +22,9 @@ import { ReportOutageComponent } from './report-outage/report-outage.component';
 import { UtilityComponent } from './utility/utility.component';
 import { CreateUtilityComponent } from './create-utility/create-utility.component';
 import { ViewOutageComponent } from './view-outage/view-outage.component';
+import { UtilityAreaComponent } from './utility-area/utility-area.component';
+import { CreateUtilityAreaComponent } from './create-utility-area/create-utility-area.component';
+import { UtilityAreaChoiceComponent } from './utility-area-choice/utility-area-choice.component';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { ViewOutageComponent } from './view-outage/view-outage.component';
     UtilityComponent,
     CreateUtilityComponent,
     ViewOutageComponent,
-    ViewOutageComponent
+    ViewOutageComponent,
+    UtilityAreaComponent,
+    CreateUtilityAreaComponent,
+    UtilityAreaChoiceComponent
   ],
   imports: [
     AppRoutingModule,
