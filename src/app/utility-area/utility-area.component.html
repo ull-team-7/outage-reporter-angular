@@ -1,17 +1,17 @@
 <div style="padding: 13px;">
     <h1>Utility Areas</h1>
+    <h2>[{{ utility.name }}]:</h2>
     <mat-card *ngFor="let utilityArea of utilityAreas" style="margin-top: 11px;">
         <mat-card-content>
             <p>
-                <b>Utility Company:</b> {{ utility.name }}<br>
-                <b>Zipcode:</b> {{ utilityArea.zipCode }}<br>
+                <b>Zip Code:</b> {{ utilityArea.zipCode }}<br>
                 <b>Outage Status:</b> {{ utilityArea.outageStatus }}<br>
-                <b>Time until fix:</b> {{ utilityArea.fixTime }}<br>
+                <b>Time Until Fix:</b> {{ utilityArea.fixTime }}<br>
                 <b>Comment:</b> {{ utilityArea.comment }}
             </p>
         </mat-card-content>
     </mat-card>
-    <!-- <div style="padding: 10px;">
-        <button class="btn btn-success" (click)="createOutage()">Report Outage</button>
-    </div> -->
+    <div style="padding: 10px;">
+        <button class="btn btn-success" (click)="createAreas()">Add Utility Area</button>
+    </div>
 </div>

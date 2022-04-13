@@ -20,7 +20,6 @@ export class ReportOutageComponent implements OnInit {
   ngOnInit(): void {
     this.utilityService.getUtilities().subscribe((data) => {
     this.utilities = data});
-    console.log(this.utilities);
   }
 
   onSubmit() {

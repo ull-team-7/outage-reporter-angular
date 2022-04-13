@@ -20,14 +20,14 @@ export class UtilityAreaComponent implements OnInit {
 
   ngOnInit(): void {
     this.utilityId = + this.route.snapshot.paramMap.get("id")!;
-    console.log("utilityId = " + this.utilityId);
 
     this.utilityService.getUtility(this.utilityId).subscribe((data) => {
       this.utility = data;
+      this.utilityAreas = this.utility.utilityAreas;
     });
-
-    console.log("typeof(this.utility.utilityAreas) is " + typeof(this.utility.utilityAreas));
-    this.utilityAreas = this.utility.utilityAreas;
   }
 
+  createAreas() {
+    this.router.navigate(["create-utility-area"]);
+  }
 }
