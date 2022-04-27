@@ -47,8 +47,8 @@
         </div>
         <div class="forum-group">
             <mat-form-field>
-                <mat-select placeholder="Utility Company">
-                    <mat-option *ngFor="let utility of utilities" value="utility">
+                <mat-select placeholder="Utility Company" required [(ngModel)]="utilityId" name="utilityId">
+                    <mat-option *ngFor="let utility of utilities" value="{{ utility.utilityId }}">
                         {{utility.name}}
                     </mat-option>
                 </mat-select>
