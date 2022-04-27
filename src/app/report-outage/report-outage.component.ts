@@ -14,6 +14,7 @@ export class ReportOutageComponent implements OnInit {
 
   outage: Outage = new Outage;
   utilities!: Utility[];
+  utilityId!: number;
 
   constructor(private outageService: OutageService, private router: Router, private utilityService: UtilityService) { }
 
@@ -23,6 +24,11 @@ export class ReportOutageComponent implements OnInit {
   }
 
   onSubmit() {
+    this.utilities.forEach(utility => {
+      if (utility.utilityId == this.utilityId) {
+        this.outage.utility = utility;
+      }
+    });
     this.outageService.addOutage(this.outage).subscribe(data => {
       this.router.navigate(['/outages'])
     });

@@ -3,7 +3,7 @@
     <form (ngSubmit)="onSubmit()" #utilityAreaForm="ngForm">
         <div class="forum-group">
             <mat-form-field>
-                <mat-select placeholder="Utility Company" required [(ngModel)]="selectedOption" name="first">
+                <mat-select placeholder="Utility Company" required [(ngModel)]="selectedOption" name="selectedOption">
                     <mat-option *ngFor="let utility of utilities" value="{{ utility.utilityId }}">
                         {{ utility.name }}
                     </mat-option>
