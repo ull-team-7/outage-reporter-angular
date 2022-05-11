@@ -6,7 +6,8 @@
                 <b>Name:</b> {{ outage.firstName + " " + outage.lastName }}<br>
                 <b>Address:</b> {{ outage.streetAddress + ", " + outage.zipCode }}<br>
                 <b>Email:</b> {{ outage.email }}<br>
-                <b>Comment:</b> {{ outage.comment }}
+                <b>Comment:</b> {{ outage.comment }}<br>
+                <b>Utility Company: </b> {{ outage.utility.name }}
             </p>
         </mat-card-content>
     </mat-card>
